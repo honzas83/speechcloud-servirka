@@ -48,7 +48,7 @@ class ServirkaKarel(Dialog):
                     break
             elif "plat" in rozpoznano:
                 if UCET:
-                    shrnuti = ["Měl jste"]
+                    shrnuti = []
                     cena = 0
                     for polozka, pocet in UCET.items():
                         if pocet == 1:
@@ -57,7 +57,7 @@ class ServirkaKarel(Dialog):
                             shrnuti.append(f"{pocet} krát {polozka}")
                         cena += pocet * CENIK[polozka]
 
-                    shrnuti = self.spoj_seznam(shrnuti, "a") + f". To dělá {cena} korun."
+                    shrnuti = "Měl jste: " + self.spoj_seznam(shrnuti, "a") + f". To dělá {cena} korun."
                     await self.synthesize_and_wait(text=shrnuti, voice=HLAS)
                     UCET.clear()
                 else:

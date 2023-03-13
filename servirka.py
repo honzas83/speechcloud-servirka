@@ -18,10 +18,10 @@ class ServirkaKarel(Dialog):
         HLAS = "Katerina210"
 
         CENIK = {
-            "pivo": 33,
-            "whisky": 80,
-            "rum": 40,
-            "víno": 50,
+            "pivo": 49,
+            "whisky": 89,
+            "rum": 65,
+            "víno": 60,
         }
 
         UCET = Counter()

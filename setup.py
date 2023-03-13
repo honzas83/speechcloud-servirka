@@ -14,8 +14,7 @@ setuptools.setup(
     author_email="honzas@ntis.zcu.cz",
     description="Example dialog manager for SpeechCloud platform",
     url="https://github.com/honzas83/speechcloud-servirka",
-    package_data={'servirka': ['index.html']},
-    include_package_data=True,
+    data_files=[("static", ["index.html"])],
     py_modules=["servirka"],
     python_requires='>=3.7',
     **kwargs

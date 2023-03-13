@@ -87,4 +87,4 @@ class ServirkaKarel(Dialog):
 if __name__ == '__main__':
     logging.basicConfig(format='%(asctime)s %(levelname)-10s %(message)s', level=logging.DEBUG)
 
-    SpeechCloudWS.run(ServirkaKarel, address="0.0.0.0", port=8888, static_path="./static")
+    SpeechCloudWS.run(ServirkaKarel, address="0.0.0.0", port=8888, static_path="./static", static_route="/(.*)")
